@@ -1,6 +1,8 @@
+#ifndef STRUCTURES_ARRAY_QUEUE_H
+#define STRUCTURES_ARRAY_QUEUE_H
 
-#ifndef QUEUE_H
-#define QUEUE_H
+#include <cstdint>  // std::size_t
+#include <stdexcept>  // C++ Exceptions
 
 namespace structures {
 
@@ -42,4 +44,4 @@ class ArrayQueue {
 
 }  // namespace structures
 
-#endif // QUEUE_H
+#endif
