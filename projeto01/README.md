@@ -1,5 +1,3 @@
-Repositório destinado ao envio de trabalhos e projetos de Estrutura de Dados - Universidade Federal de Santa Catarina
-
 Primeiro problema: validação de arquivo XML
 
 Para esta parte, pede-se exclusivamente a verificação de aninhamento e fechamento das marcações (tags) no arquivo XML (qualquer outra fonte de erro pode ser ignorada). Se houver um erro de aninhamento, deve se impresso erro na tela. Um identificador constitui uma marcação entre os caracteres < e >, podendo ser de abertura (por exemplo: <cenario>) ou de fechamento com uma / antes do identificador (por exemplo: </cenario>). Como apresentando em sala de aula, o algoritmo para resolver este problema é baseado em pilha (LIFO):
