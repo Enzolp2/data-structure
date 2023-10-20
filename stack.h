@@ -1,47 +1,32 @@
-// stack.h
-
 #ifndef STACK_H
 #define STACK_H
 
 #include <cstddef>
 
-namespace structures {
+namespace structures 
+{
+   template<typename T>
+   class ArrayStack {
+   public:
+      // Construtores e Destrutores
+      ArrayStack();
+      explicit ArrayStack(std::size_t max);
+      ~ArrayStack();
 
-template<typename T>
-//! CLASSE PILHA
-class ArrayStack {
- public:
-    //! construtor simples
-    ArrayStack();
-    //! construtor com parametro tamanho
-    explicit ArrayStack(std::size_t max);
-    //! destrutor
-    ~ArrayStack();
-    //! metodo empilha
-    void push(const T& data);
-    //! metodo desempilha
-    T pop();
-    //! metodo retorna o topo
-    T& top();
-    //! metodo limpa pilha
-    void clear();
-    //! metodo retorna tamanho
-    std::size_t size();
-    //! metodo retorna capacidade maxima
-    std::size_t max_size();
-    //! verifica se esta vazia
-    bool empty();
-    //! verifica se esta cheia
-    bool full();
-
- private:
-    T* contents;
-    int top_;
-    std::size_t max_size_;
-
-    static const auto DEFAULT_SIZE = 10u;
-};
-
+      void push(const T& data); // empilha
+      T pop(); // desempilha
+      T& top(); // retorna o topo
+      void clear(); // limpa a pilha
+      std::size_t size(); // retorna o tamanho
+      std::size_t max_size(); // retorna o tamanho maximo
+      bool empty(); // verifica se esta vazia
+      bool full(); // verifica se esta cheia
+   private:
+      T* contents;
+      int top_;
+      std::size_t max_size_;
+      static const auto DEFAULT_SIZE = 10u;
+   };
 }
 
-#endif
+#endif // STACK_H
