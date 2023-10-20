@@ -6,7 +6,7 @@ using namespace structures;
 template<typename T>
 ArrayQueue<T>::ArrayQueue() {
     max_size_ = DEFAULT_SIZE;
-    contents = new T[max_size];
+    contents = new T[max_size_];
     begin_ = 0;
     end_ = -1;
     size_ = 0;
